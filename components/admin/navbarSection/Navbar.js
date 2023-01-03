@@ -1,13 +1,12 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
-
+ 
 const Navbar = ({ flyer, setFlyer }) => {
   return (
     <>
       <div className=" fixed w-full flex items-center -mt-14  justify-between h-16 text-white z-10">
-        <div className="flex items-center justify-start   w-14 md:w-64 h-16 bg-[#14213d] border-b shadow-2xl ">
+        <div className="flex items-center justify-start w-14 md:w-64 h-16 bg-[#14213d] border-b shadow-2xl ">
           <Image
             className=" mt-2 overflow-hidden"
             width={80}
@@ -29,10 +28,9 @@ const Navbar = ({ flyer, setFlyer }) => {
                 height="25"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
-                stroke="#00000"
-                viewBox="0 0 24 24"
                 stroke="currentColor"
-                aria-hidden="true"
+                viewBox="0 0 24 24"
+                   aria-hidden="true"
               >
                 <path
                   strokeLinecap="round"
