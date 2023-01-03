@@ -45,7 +45,7 @@ const MapChart = () => {
     
 
       <ComposableMap>
-        <ZoomableGroup zoom={1}>
+        
           {" "}
           <Geographies geography={geoUrl}>
             {({ geographies }) =>
@@ -77,7 +77,7 @@ const MapChart = () => {
               </text>
             </Marker>
           ))}
-        </ZoomableGroup>
+         
       </ComposableMap>
     </>
   );

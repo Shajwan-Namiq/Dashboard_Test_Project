@@ -8,7 +8,7 @@ import PieChart from "./chart/PieChart/PieChart";
 import DoughnutChart from "./chart/DoughnutChart/DoughnutChart";
 import TotalInfo from "./headersection/TotalInfo";
 import Activities from "./activities/Activities";
-import Visitors from "./visitors/Map/Visitors";
+import Visitors from "./Map/Visitors";
 import Form from "./form/Form";
 
 

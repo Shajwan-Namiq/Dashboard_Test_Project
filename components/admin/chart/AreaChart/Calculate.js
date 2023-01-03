@@ -29,7 +29,7 @@ const Calculate = () => {
 
   return (
     <div>
-      <ul className="pb-5 text-sm lg:text-lg py-2 font-medium lg:font-semibold">
+      <ul className="pb-5 text-sm lg:text-base py-2 font-medium lg:font-semibold">
         <h2>Calculate the results : </h2>
         <li className="flex gap-1">
           1. High Profit :{" "}

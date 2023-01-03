@@ -72,13 +72,13 @@ const Activities = () => {
       <h2 className=" flex justify-center items-center py-3 text-sm font-bold text-gray-600">
         Recent Activities
       </h2>
-      <div className="px-4">
+      <div className="px-8">
          {dataActivity.map((item, index) => {
         return (
           <>
             <ol key={index} class=" relative border-l border-[#fca311]">
               <li class="mb-3 ml-7">
-                <span class="flex absolute -left-3 justify-center items-center w-6 h-6 text-gray-200 bg-[#fca311] rounded-full p-3">
+                <span class="flex absolute -left-3 justify-center items-center w-6 h-6 text-[#fca311] bg-[#e5e5e5] rounded-full p-3">
                   0{index + 1}
                 </span>
                 <div class=" p-4 bg-[#e5e5e5] rounded-lg border border-gray-200 shadow-sm ">
@@ -105,11 +105,11 @@ const Activities = () => {
                   </div>
 
                   <div class="items-center mb-3 sm:flex">
-                    <div class="text-sm font-semibold text-[#fca311] ">
+                    <div class="text-sm font-semibold text-gray-600">
                       {item.title}{" "}
                       <Link
                         href="#"
-                        class="font-semibold text-gray-600   hover:underline"
+                        class="font-semibold text-[#fca311] hover:underline"
                       >
                         More..
                       </Link>

@@ -5,7 +5,7 @@ const Form = () => {
     <div className="pb-10">
       <div class="mt-8 mx-4">
         <div class="grid grid-cols-1 md:grid-cols-2">
-          <div class="p-6 mr-2 bg-[#14213d] sm:rounded-lg">
+          <div class="p-6 mr-2 bg-[#14213d] rounded shadow">
             <h1 class="text-4xl sm:text-5xl text-gray-800 dark:text-white font-extrabold tracking-tight">
               Get in touch
             </h1>
@@ -95,7 +95,7 @@ const Form = () => {
                 name="name"
                 id="name"
                 placeholder="Full Name"
-                class="w-100 mt-2 py-3 px-3 rounded-lg bg-[#14213d] border border-gray-400 dark:border-gray-700 text-gray-800 dark:text-gray-50 font-semibold focus:border-blue-500 focus:outline-none"
+                class="w-100 mt-2 py-3 px-3 rounded bg-[#14213d] border border-gray-400 dark:border-gray-700 text-gray-800 dark:text-gray-50 font-semibold focus:border-blue-500 focus:outline-none"
               />
             </div>
 
@@ -108,7 +108,7 @@ const Form = () => {
                 name="email"
                 id="email"
                 placeholder="Email"
-                class="w-100 mt-2 py-3 px-3 rounded-lg  bg-[#14213d] border border-gray-400 dark:border-gray-700 text-gray-800 dark:text-gray-50 font-semibold focus:border-blue-500 focus:outline-none"
+                class="w-100 mt-2 py-3 px-3 rounded  bg-[#14213d] border border-gray-400 dark:border-gray-700 text-gray-800 dark:text-gray-50 font-semibold focus:border-blue-500 focus:outline-none"
               />
             </div>
 
@@ -121,13 +121,13 @@ const Form = () => {
                 name="tel"
                 id="tel"
                 placeholder="Telephone Number"
-                class="w-100 mt-2 py-3 px-3 rounded-lg bg-[#14213d] border border-gray-400 dark:border-gray-700 text-gray-800 dark:text-gray-50 font-semibold focus:border-blue-500 focus:outline-none"
+                class="w-100 mt-2 py-3 px-3 rounded bg-[#14213d] border border-gray-400 dark:border-gray-700 text-gray-800 dark:text-gray-50 font-semibold focus:border-blue-500 focus:outline-none"
               />
             </div>
 
             <button
               type="submit"
-              class="md:w-32 bg-[#e5e5e5] text-gray-800 font-bold py-3 px-6 rounded-lg mt-4 hover:bg-blue-500 dark:hover:bg-gray-200 transition ease-in-out duration-300"
+              class="md:w-32 bg-[#e5e5e5] text-gray-800 font-bold py-3 px-6 rounded mt-4 hover:bg-blue-500 dark:hover:bg-gray-200 transition ease-in-out duration-300"
             >
               Submit
             </button>
