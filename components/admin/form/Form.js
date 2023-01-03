@@ -87,7 +87,7 @@ const Form = () => {
           </div>
           <form class="p-6 flex flex-col justify-center">
             <div class="flex flex-col">
-              <label for="name" class="hidden">
+              <label htmlFor="name" class="hidden">
                 Full Name
               </label>
               <input

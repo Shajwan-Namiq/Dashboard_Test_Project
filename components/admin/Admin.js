@@ -2,8 +2,8 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import Navbar from "./navbar/Navbar";
-import Sidebar from "./navbar/Sidebar";
+import Navbar from "./navbarSection/Navbar";
+import Sidebar from "./navbarSection/Sidebar";
 import Layout from "./Layout";
 
 const Admin = () => {
