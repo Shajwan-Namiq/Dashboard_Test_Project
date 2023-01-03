@@ -44,7 +44,7 @@ const MapChart = () => {
     <>
     
 
-      <ComposableMap data-tip="">
+      <ComposableMap>
         <ZoomableGroup zoom={1}>
           {" "}
           <Geographies geography={geoUrl}>

@@ -13,23 +13,25 @@ const Sidebar = ({ flyer, setFlyer }) => {
         bg-[#14213d]  h-full text-white transition-all duration-300 border-none z-10 sidebar`}
       >
         <div className="mt-5 overflow-y-auto overflow-x-hidden flex flex-col justify-between flex-grow">
-          <ul className="flex flex-col py-4 space-y-1">
-            <li className=" pb-5">
+          <ul className=" mt-0 lg:mt-8 flexflex-col py-4 space-y-1">
+            <li className="pb-2 lg:pb-16">
               <div className="flex flex-row items-center justify-center h-10">
-                <Link href="#" className="flex items-center justify-center ">
+                <Link href="#" className="px-2 flex flex-col items-center ">
                   <Image
                     width={100}
                     height={100}
                     alt="admin-img"
                     src="/avater.png"
-                    className="object-cover w-10 h-10 rounded-full"
+                    className="object-cover rounded-full "
                   />
 
                   <div className={` ${flyer ? "hidden" : "block"} `}>
                     <span
-                      className={` lg:block hidden font-semibold first-letter:ml-5 text-sm tracking-wide truncate`}
+                      className={`pt-2 lg:block hidden font-semibold px-5 text-sm tracking-wide truncate`}
                     >
-                      Welcome John Doi
+                     <p>Welcome  John Doi</p> 
+                     
+                     
                     </span>
                   </div>
                 </Link>

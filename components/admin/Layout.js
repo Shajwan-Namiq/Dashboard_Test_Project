@@ -8,7 +8,7 @@ import PieChart from "./chart/PieChart/PieChart";
 import DoughnutChart from "./chart/DoughnutChart/DoughnutChart";
 import TotalInfo from "./headersection/TotalInfo";
 import Activities from "./activities/Activities";
-import Visitors from "./visitors/map/Visitors";
+import Visitors from "./visitors/Map/Visitors";
 
 const Layout = ({ flyer, setFlyer }) => {
   return (
@@ -37,7 +37,7 @@ const Layout = ({ flyer, setFlyer }) => {
         </div>
 
         {/*   Visitor Location map */}
-        <div>
+        <div class="grid grid-cols-1 p-4 ">
           <Visitors />
         </div>
       </div>

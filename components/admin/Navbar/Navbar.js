@@ -6,28 +6,30 @@ import { useState } from "react";
 const Navbar = ({ flyer, setFlyer }) => {
   return (
     <>
-      <div className="fixed w-full flex items-center -mt-14  justify-between h-16 text-white z-10">
-        <div className="flex items-center justify-start md:px-5  w-14 md:w-64 h-16 bg-slate-700 border-none">
+      <div className=" fixed w-full flex items-center -mt-14  justify-between h-16 text-white z-10">
+        <div className="flex items-center justify-start   w-14 md:w-64 h-16 bg-[#14213d] border-b shadow-2xl ">
           <Image
-            className="ml-2 w-20 md:ml-0 mt-2 mr-2  overflow-hidden"
-            width={100}
-            height={100}
+            className=" mt-2 overflow-hidden"
+            width={80}
+            height={80}
             src={"/logo.png"}
             alt="logo"
           />
-          <span className="mt-2 hidden md:block">BAY ADMIN</span>
+          <span className="mt-2 hidden md:block text-xl">Gentella Alela</span>
         </div>
-        <div className="flex justify-between items-center h-16 bg-[#14213d]   header-right">
+
+        <div className="flex justify-between items-center h-16 bg-white shadow-lg  header-right">
           <div className="flex items-center w-full max-w-xl mr-4 p-4 shadow-sm ">
             <button
               onClick={() => setFlyer(!flyer)}
-              className="hidden lg:block outline-none focus:outline-none"
+              className="hidden lg:block outline-none focus:outline-none text-black"
             >
               <svg
                 width="25"
                 height="25"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
+                stroke="#00000"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
                 aria-hidden="true"
@@ -44,7 +46,7 @@ const Navbar = ({ flyer, setFlyer }) => {
           <ul className="flex justify-center items-center  mt-2 space-x-4">
             <li>
               <button
-                className="p-2 text-[#fca311] align-middle rounded-full hover:text-white hover:bg-[#fca311] focus:outline-none "
+                className="p-2 text-black align-middle rounded-full hover:text-white hover:bg-[#fca311] focus:outline-none "
                 aria-label="Notifications"
                 aria-haspopup="true"
               >
@@ -76,7 +78,7 @@ const Navbar = ({ flyer, setFlyer }) => {
             </li>
             <li>
               <button
-                className="p-2  text-[#fca311] align-middle rounded-full hover:text-white hover:bg-[#fca311] focus:outline-none "
+                className="p-2  text-black align-middle rounded-full hover:text-white hover:bg-[#fca311] focus:outline-none "
                 aria-label="Notifications"
                 aria-haspopup="true"
               >
@@ -110,7 +112,10 @@ const Navbar = ({ flyer, setFlyer }) => {
               <div className="block w-px h-6 mx-3 bg-gray-400 dark:bg-gray-700"></div>
             </li>
             <li>
-              <Link href="#" className="flex items-center mr-4 hover:text-blue-100">
+              <Link
+                href="#"
+                className="flex items-center mr-4 hover:text-[#fca311] text-black"
+              >
                 <span className="inline-flex mr-1">
                   <svg
                     className="w-5 h-5"
