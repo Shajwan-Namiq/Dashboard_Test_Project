@@ -8,20 +8,13 @@ import PieChart from "./chart/PieChart/PieChart";
 import DoughnutChart from "./chart/DoughnutChart/DoughnutChart";
 import TotalInfo from "./headersection/TotalInfo";
 import Activities from "./activities/Activities";
-import Visitors from "./visitors/Visitors";
-
-
-
-
-
-
-
+import Visitors from "./visitors/map/Visitors";
 
 const Layout = ({ flyer, setFlyer }) => {
   return (
     <div className="bg-[#f7f3f3] ">
       <div
-        className={` h-full ml-14 mt-14 mb-10  ${
+        className={` h-full ml-14 mt-14 mb-0  ${
           flyer ? "md:ml-20" : "md:ml-64"
         } "`}
       >
@@ -37,15 +30,16 @@ const Layout = ({ flyer, setFlyer }) => {
           <DoughnutChart />
         </div>
 
-        {/* chart section  2*/}
+        {/* chart section  2 && Activities*/}
         <div className="grid grid-cols-1 lg:grid-cols-2 p-4 gap-4">
-          <Activities />
           <BarChart />
+          <Activities />
         </div>
 
-        {/*  Recent Activities and Visitor Location map */}
-        <Visitors/>
-         
+        {/*   Visitor Location map */}
+        <div>
+          <Visitors />
+        </div>
       </div>
     </div>
   );

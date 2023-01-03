@@ -68,15 +68,15 @@ const Activities = () => {
   }
 
   return (
-    <div className="px-6 py-2 bg-white shadow-lg rounded">
+    <div className="bg-white shadow-lg relative flex flex-col min-w-0 break-words  w-full  rounded">
       <h2 className=" flex justify-center items-center py-3 text-sm font-bold text-gray-600">
         Recent Activities
       </h2>
-
-      {dataActivity.map((item, index) => {
+      <div className="px-4">
+         {dataActivity.map((item, index) => {
         return (
           <>
-            <ol key={index} class="relative border-l border-[#fca311]">
+            <ol key={index} class=" relative border-l border-[#fca311]">
               <li class="mb-3 ml-7">
                 <span class="flex absolute -left-3 justify-center items-center w-6 h-6 text-gray-200 bg-[#fca311] rounded-full p-3">
                   0{index + 1}
@@ -124,6 +124,8 @@ const Activities = () => {
           </>
         );
       })}
+      </div>
+     
     </div>
   );
 };
