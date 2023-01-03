@@ -9,6 +9,8 @@ import DoughnutChart from "./chart/DoughnutChart/DoughnutChart";
 import TotalInfo from "./headersection/TotalInfo";
 import Activities from "./activities/Activities";
 import Visitors from "./visitors/Map/Visitors";
+import Form from "./form/Form";
+
 
 const Layout = ({ flyer, setFlyer }) => {
   return (
@@ -40,6 +42,9 @@ const Layout = ({ flyer, setFlyer }) => {
         <div class="grid grid-cols-1 p-4 ">
           <Visitors />
         </div>
+
+        {/*   Form */}
+        <Form />
       </div>
     </div>
   );
