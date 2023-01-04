@@ -91,8 +91,8 @@ const Form = () => {
 
           <Formik
             initialValues={{ name: "", email: "", tel: "" }}
-           
             validate={(values) => {
+              const errors = {};
               if (!values.email) {
                 errors.email = "Required";
               } else if (
@@ -102,8 +102,7 @@ const Form = () => {
               }
               return errors;
             }}
-            
-            onSubmit={(values,{ setSubmitting }) => {
+            onSubmit={(values, { setSubmitting }) => {
               setTimeout(() => {
                 alert(JSON.stringify(values, null, 2));
                 setSubmitting(false);
@@ -136,7 +135,7 @@ const Form = () => {
                     value={values.name}
                     id="name"
                     placeholder="Full Name"
-                    class="w-100 mt-2 py-3 px-3 rounded bg-[#14213d] border border-gray-400 dark:border-gray-700 text-gray-50 font-semibold focus:border-blue-500 focus:outline-none"
+                    class="w-100 mt-2 py-3 px-3 rounded bg-[#14213d] border border-gray-400 dark:border-gray-700 text-gray-800 dark:text-gray-50 font-semibold focus:border-blue-500 focus:outline-none"
                   />{" "}
                 </div>
 
@@ -152,7 +151,7 @@ const Form = () => {
                     value={values.email}
                     id="email"
                     placeholder="Email"
-                    class="w-100 mt-2 py-3 px-3 rounded bg-[#14213d] border border-gray-400 dark:border-gray-700 text-gray-50 font-semibold focus:border-blue-500 focus:outline-none"
+                    class="w-100 mt-2 py-3 px-3 rounded  bg-[#14213d] border border-gray-400 dark:border-gray-700 text-gray-800 dark:text-gray-50 font-semibold focus:border-blue-500 focus:outline-none"
                   />{" "}
                   {errors.email && touched.email && errors.email}
                 </div>
