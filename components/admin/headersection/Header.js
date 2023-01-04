@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <>
       <div class=" bg-gray-100 flex items-center justify-center  ">
-        <div class="max-w-7xl w-full mx-auto py-8 px-4">
+        <div class="max-w-7xl w-full mx-auto pt-8 px-4">
           <div class="flex flex-col lg:flex-row w-full lg:space-x-2 space-y-2 lg:space-y-0 mb-2 lg:mb-4">
           
           

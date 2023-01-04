@@ -67,7 +67,6 @@ const Navbar = ({ flyer, setFlyer }) => {
                     />
                   </svg>
                 </div>
-
                 <span
                   aria-hidden="true"
                   className="absolute top-0 right-0 inline-block w-3 h-3 transform translate-x-1 -translate-y-1 bg-red-600 border-2 border-white rounded-full dark:border-gray-800"
@@ -81,7 +80,7 @@ const Navbar = ({ flyer, setFlyer }) => {
                 aria-haspopup="true"
               >
                 <div className="relative flex items-cemter   ">
-                  <div className="absolute left-3 bottom-4  bg-[#fca311] rounded-full">
+                  <div className="absolute left-3 bottom-4 bg-[#fca311] rounded-full">
                     <span className="text-sm text-white p-1">15</span>
                   </div>
                   <svg
