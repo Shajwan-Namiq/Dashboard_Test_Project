@@ -1,4 +1,5 @@
-import React from 'react'
+import React from "react";
+import { Formik } from "formik";
 
 const Form = () => {
   return (
@@ -37,7 +38,7 @@ const Form = () => {
                 />
               </svg>
               <div class="ml-4 text-md tracking-wide font-semibold w-40">
-                Dhaka, Street, State, Postal Code
+                Sulaymanyah, Salim street, Iraq, 46001
               </div>
             </div>
 
@@ -59,7 +60,7 @@ const Form = () => {
                 />
               </svg>
               <div class="ml-4 text-md tracking-wide font-semibold w-40">
-                +880 1234567890
+                +964 1234567890
               </div>
             </div>
 
@@ -85,57 +86,107 @@ const Form = () => {
               </div>
             </div>
           </div>
-          <form class="p-6 flex flex-col justify-center">
-            <div class="flex flex-col">
-              <label htmlFor="name" class="hidden">
-                Full Name
-              </label>
-              <input
-                type="name"
-                name="name"
-                id="name"
-                placeholder="Full Name"
-                class="w-100 mt-2 py-3 px-3 rounded bg-[#14213d] border border-gray-400 dark:border-gray-700 text-gray-800 dark:text-gray-50 font-semibold focus:border-blue-500 focus:outline-none"
-              />
-            </div>
 
-            <div class="flex flex-col mt-2">
-              <label for="email" class="hidden">
-                Email
-              </label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Email"
-                class="w-100 mt-2 py-3 px-3 rounded  bg-[#14213d] border border-gray-400 dark:border-gray-700 text-gray-800 dark:text-gray-50 font-semibold focus:border-blue-500 focus:outline-none"
-              />
-            </div>
+          {/***validation :using formik */}
 
-            <div class="flex flex-col mt-2">
-              <label for="tel" class="hidden">
-                Number
-              </label>
-              <input
-                type="tel"
-                name="tel"
-                id="tel"
-                placeholder="Telephone Number"
-                class="w-100 mt-2 py-3 px-3 rounded bg-[#14213d] border border-gray-400 dark:border-gray-700 text-gray-800 dark:text-gray-50 font-semibold focus:border-blue-500 focus:outline-none"
-              />
-            </div>
+          <Formik
+            initialValues={{ name: "", email: "", tel: "" }}
+           
+            validate={(values) => {
+              if (!values.email) {
+                errors.email = "Required";
+              } else if (
+                !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+              ) {
+                errors.email = "Invalid email address";
+              }
+              return errors;
+            }}
+            
+            onSubmit={(values,{ setSubmitting }) => {
+              setTimeout(() => {
+                alert(JSON.stringify(values, null, 2));
+                setSubmitting(false);
+              }, 400);
+            }}
+          >
+            {({
+              values,
+              errors,
+              touched,
+              handleChange,
+              handleBlur,
+              handleSubmit,
+              isSubmitting,
+              /* and other goodies */
+            }) => (
+              <form
+                onSubmit={handleSubmit}
+                class="p-6 flex flex-col justify-center"
+              >
+                <div class="flex flex-col">
+                  <label htmlFor="name" class="hidden">
+                    Full Name
+                  </label>
+                  <input
+                    type="name"
+                    name="name"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.name}
+                    id="name"
+                    placeholder="Full Name"
+                    class="w-100 mt-2 py-3 px-3 rounded bg-[#14213d] border border-gray-400 dark:border-gray-700 text-gray-50 font-semibold focus:border-blue-500 focus:outline-none"
+                  />{" "}
+                </div>
 
-            <button
-              type="submit"
-              class="md:w-32 bg-[#e5e5e5] text-gray-800 font-bold py-3 px-6 rounded mt-4 hover:bg-blue-500 dark:hover:bg-gray-200 transition ease-in-out duration-300"
-            >
-              Submit
-            </button>
-          </form>
+                <div class="flex flex-col mt-2">
+                  <label for="email" class="hidden">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.email}
+                    id="email"
+                    placeholder="Email"
+                    class="w-100 mt-2 py-3 px-3 rounded bg-[#14213d] border border-gray-400 dark:border-gray-700 text-gray-50 font-semibold focus:border-blue-500 focus:outline-none"
+                  />{" "}
+                  {errors.email && touched.email && errors.email}
+                </div>
+
+                <div class="flex flex-col mt-2">
+                  <label for="tel" class="hidden">
+                    Number
+                  </label>
+                  <input
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.tel}
+                    type="tel"
+                    name="tel"
+                    id="tel"
+                    placeholder="Telephone Number"
+                    class="w-100 mt-2 py-3 px-3 rounded bg-[#14213d] border border-gray-400 dark:border-gray-700 text-gray-800 dark:text-gray-50 font-semibold focus:border-blue-500 focus:outline-none"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  class="md:w-32 bg-[#e5e5e5] text-gray-800 font-bold py-3 px-6 rounded mt-4 hover:bg-blue-500 dark:hover:bg-gray-200 transition ease-in-out duration-300"
+                >
+                  Submit
+                </button>
+              </form>
+            )}
+          </Formik>
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default Form
+export default Form;
